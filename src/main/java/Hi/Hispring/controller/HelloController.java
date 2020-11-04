@@ -18,6 +18,10 @@ public class HelloController {
     public String helloMvc(@RequestParam("name") String name, Model model) {
         model.addAttribute("name", name);
         return "hello-template";
+        // localhost:8080/hello-mvc?name=spring!! 으로 접속 시
+        // name param = spring!! 을 name에 넣고 model로 가져온 뒤
+        // hello-template.html에 return한다.
+        // template.html안에 $name에 param을 넣고 viewResolver에서 변환해서 출력
     }
 }
 
